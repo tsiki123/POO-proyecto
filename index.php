@@ -1,5 +1,11 @@
 <?php
+	include_once('class/Usuario.php');
+	include_once('class/Conexion.php');
+	session_start();
+	
 
+	
+	
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,30 +49,35 @@
 				</div>
 
 		<center>
-					<div class= "well" id = "div-formulario1"  style="width:400px" style="height: 500px">
-						<td colspan="2"><label for="inputEmail" class="sr-only">Usuario</label>
-		        		<input type="Correo" id="inputCorreo" class="form-control" placeholder="Usuario" required autofocus></td>
-						<br>
-						<br>
-						<label for="inputPassword" class="sr-only">Contraseña</label>
-		        		<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-		        		<br>
-		        		<div id="resultado">
-		        			
-		        		</div>
-		        		<br>
-		        		<input type="button" id="login"  value="Ingresar" class="btn btn-primary btn btn-lg" >
-<!--
+				<form style="width:400px"  class="well" style="height: 500px" action="index.php" methond="get">
+					<div>
+						<input type="email" class="form-control" name="correo" id="correo" placeholder="Correo" require autofocus >
+					</div></br></br>
+					
+					
+					<div>
+						<input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="contraseña" require>
+					</div></br>
+					<div>
+						<input type="submit" class="btn btn-primary btn btn-lg" value="Ingresar">
+					</div>
+				</form>
+
+						
 		        		<br>
 		        		<a href="nuevaContrasena.php">¿Olvidaste tu contraseña?</a><br>
--->
+
 					</div>
 					<a href="crearCuenta.php">Crear Una Cuenta</a><br>
-				</center>
+			
+			
+			
+					
+		</center>
 	
 
-<script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-<script src="js/IniciarSesion.js"></script>
+			<script src="js/jquery.min.js"></script>
+  			<script src="js/bootstrap.min.js"></script>
+			<script src="js/iniciarSesion.js"></script>
 </body>
 </html>
