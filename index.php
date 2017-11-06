@@ -55,13 +55,13 @@
 		        			
 		        		</div>
 		        		<br>
-		        		<input type="submit" id="login"  value="Ingresar" class="btn btn-primary btn btn-lg" >
-
+		        		<input type="button" id="login"  value="Ingresar" class="btn btn-primary btn btn-lg" >
+<!--
 		        		<br>
 		        		<a href="nuevaContrasena.php">¿Olvidaste tu contraseña?</a><br>
-
+-->
 					</div>
-					<a href="indexCreaCuenta.php">Crear Una Cuenta</a><br>
+					<a href="crearCuenta.php">Crear Una Cuenta</a><br>
 				</center>
 	
 
