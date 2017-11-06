@@ -2,7 +2,25 @@
 	include_once('class/Usuario.php');
 	include_once('class/Conexion.php');
 	session_start();
-	
+	$conexion=new Conexion();
+	$correo=$_POST['correo'];
+	$contrasena=$_POST['contrasena'];
+	$sql="SELECT * FROM usuario WHERE correo=$correo, contrasena=$contrasena ";
+	$respuesta=$conexion->query($sql);
+	switch($respuesta['tipo-usuario']){
+		case 1:
+			header('location: administrado.php');
+			break;
+		case 2:
+			header('location: gerentePrestamo.php');
+			break;
+		case 3:
+			header('location: cliente.php');
+			break;
+		default:
+		break;		
+	}
+
 
 	
 	
