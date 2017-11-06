@@ -4,7 +4,7 @@
 
 		private $username='postgres';
 		private $password='';
-		private $dbname='algo';
+		private $dbname='cooperativaPOO';
 		private $host = 'localhost';
 		private $puerto="5432";
 		private $link; //nombre del enlace a la  coneccion 
@@ -27,14 +27,7 @@
 		}
 
 	
-		/*
-		public function cantidadRegistros($resultado){
-			return mysqli_num_rows($resultado);
-		}
-		public function liberarResultado($resultado){
-			mysqli_free_result($resultado);
-		}
-		*/
+	
 		public function getUserName(){
 			return $this->username;
 		}
