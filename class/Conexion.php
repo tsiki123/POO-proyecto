@@ -12,7 +12,7 @@
 		public function __construct(){
 			$this->link= new PDO("pgsql:dbname=$this->dbname;  host=$this->host", $this->username, $this->password );
 			if (!$this->link){
-				echo "No se pudo conectar con mysql";
+				echo "No se pudo conectar con con la base de datos";
 				exit;
 			}		
 		}
