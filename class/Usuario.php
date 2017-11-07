@@ -27,6 +27,16 @@
         public function getContrasena(){return $this->contrasena;}
         public function getTipoUsuario(){return $this->tipoUsuario;}
 
+        public function guardarUsuario(){
+            include_once('../logout.php');
+            $sql="INSERT INTO usuario (identidad,nombre,apellido,'numero-celular','numero-telefono','tipo-usuario','codigo-usuario',correo,contrasena)
+             VALUES($this->numeroIdentidad,$this->nombre,$this->apellido,$this->numeroCelular,$this->numeroTelefono,
+             $this->tipoUsuario,$this->codigoUsuario,$this->correo,'$this->contrasena);";
+            $db->query($sql);
+            
+
+        }
+
 
 
 
