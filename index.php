@@ -1,13 +1,17 @@
 <?php
-	//phpInfo();
-	include_once('logout.php');
-	$sentencia=$db->prepare('SELECT * FROM tipo');
-	$sentencia->execucte();
-/*
-	$conn= new conexion();
-	$conn->getDb()->prepare('SELECT * FROM tipo');
-	$conn->excute();
-*/	
+/*	include_once('class/Conexion.php');
+	$conexion=new Conexion();
+	$buscar= $conexion->ejecutarInstruccion("SELECT * FROM tipo");
+    foreach($buscar as $resultado ){io'];
+        echo "    ";
+        echo $resultado['definicion'];
+        echo "   \n";
+
+    }
+    $conexion->cerrarConexion();
+
+*/
+        echo $resultado['tipo-usuar'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
