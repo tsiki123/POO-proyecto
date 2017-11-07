@@ -1,32 +1,16 @@
 <?php
-	include_once('class/Usuario.php');
-	include_once('class/Conexion.php');
-	session_start();
-	$conexion=new Conexion();
-	$correo=$_POST['correo'];
-	$contrasena=$_POST['contrasena'];
-	$sql="SELECT * FROM usuario WHERE correo=$correo, contrasena=$contrasena ";
-	$respuesta=$conexion->query($sql);
-	switch($respuesta['tipo-usuario']){
-		case 1:
-			header('location: administrado.php');
-			break;
-		case 2:
-			header('location: gerentePrestamo.php');
-			break;
-		case 3:
-			header('location: cliente.php');
-			break;
-		default:
-		break;		
-	}
-
-
-	
-	
+	//phpInfo();
+	include_once('logout.php');
+	$sentencia=$db->prepare('SELECT * FROM tipo');
+	$sentencia->execucte();
+/*
+	$conn= new conexion();
+	$conn->getDb()->prepare('SELECT * FROM tipo');
+	$conn->excute();
+*/	
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,9 +35,7 @@
 			padding:50px; 
 			border:1px #922713 solid;
 
-		}
-
-		
+		}	
 	</style>
     
     <title>Cooperativa POO</title>
@@ -67,7 +49,7 @@
 				</div>
 
 		<center>
-				<form style="width:400px"  class="well" style="height: 500px" action="index.php" methond="get">
+				<form style="width:400px"  class="well" style="height: 500px" action="index.php" method="post">
 					<div>
 						<input type="email" class="form-control" name="correo" id="correo" placeholder="Correo" require autofocus >
 					</div></br></br>
