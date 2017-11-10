@@ -1,17 +1,38 @@
-<?php
-/*	include_once('class/Conexion.php');
-	$conexion=new Conexion();
-	$buscar= $conexion->ejecutarInstruccion("SELECT * FROM tipo");
-    foreach($buscar as $resultado ){io'];
-        echo "    ";
-        echo $resultado['definicion'];
-        echo "   \n";
+<?php	
+	if(isset($_POST['contrasena'])&&isset($_POST['correo'])){
+		$correo=$correo=$_POST['correo'];
+		$contrasena=$_POST['contrasena'];
 
-    }
-    $conexion->cerrarConexion();
+		include_once('logout.php');
+		//include_once('class/Usuario.php');
+		session_start();
+		
+				$consulta=$db->query("SELECT * FROM usuario WHERE correo='$correo' ");
+				$row=$consulta->fetch();
+				
+				$_SESSION['usuario']=$row['nombre'];
+				$_SESSION['tipoUsuario']=$row['tipo-usuario'];		
+		//new Usuario($consulta['identidad'],$consulta['nombre'],$consulta['apellido'], $consulta['numero-telefono'], $consulta['numero-celular'], $consulta['codigo-usuario'],$consulta['contrasena'],$consulta['tipo-usuario'], $consulta['correo']);	
+		
+		switch($_SESSION['tipoUsuario']){
 
-*/
-        echo $resultado['tipo-usuar'];
+			case 0:
+				header('location: administrador.php');
+				break;
+			case 1;
+				header('location: gerentePrestamo.php');
+				break;
+			case 2:
+				header('location: cliente.php');
+				break;	
+
+		}
+
+	}
+
+
+
+        
 ?>
 <!DOCTYPE html>
 <html lang="es">

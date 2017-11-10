@@ -1,6 +1,6 @@
 <?php
     session_start();
-    $_SESSION["usuario"]="joseluis";
+    
      if( !isset($_SESSION["usuario"]) ){
         header("location:index.php");
         exit();
@@ -86,7 +86,7 @@
                 <tr>
                     <th><?php echo $row['identidad'];?></th>
                     <th><?php echo $row['nombre'];?></th>
-                    <th><?php echo $row['apellido']?></th>
+                    <th><?php echo $row['contrasena']?></th>
 
                     <th><?php echo $row['correo'];?></th>
                 </tr>
