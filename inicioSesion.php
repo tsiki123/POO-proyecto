@@ -11,7 +11,7 @@
     $conexion->cerrarConexion();
 
 */
-        echo $resultado['tipo-usuar'];
+        //echo $resultado['tipo-usuar'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -44,16 +44,19 @@
     
     <title>Cooperativa POO</title>
 </head>
-<body>
+<body style="background-image:url(imagenes/background.jpg); background-size:cover; background-attachment: fixed;">
 		<div class="container">
-				<center><h1> <strong> <img src="imagenes/coop2.jpg" style="width:300px"> </strong> </h1></center>
+				<center><h1> <strong> <img src="imagenes/coop4.jpg" style="width:300px; padding: 10px; margin:20px;" > </strong> </h1></center>
 				<center><h1> <strong></strong> </h1></center>
 				
 				<center><h5>Inicia sesion para acceder al sistema</h5></center>
-				</div>
+		</div>
 
 		<center>
-				<form style="width:400px"  class="well" style="height: 500px" action="index.php" method="post">
+			<div class= "well" id = "div-formulario1"  style="width:500px" style="height: 500px">
+
+
+				<form style="width:300px"  class="well" style="height: 500px" action="index.php" method="post">
 					<div>
 						<input type="email" class="form-control" name="correo" id="correo" placeholder="Correo" require autofocus >
 					</div></br></br>
@@ -63,16 +66,17 @@
 						<input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="contraseña" require>
 					</div></br>
 					<div>
+						
 						<input type="submit" class="btn btn-primary btn btn-lg" value="Ingresar">
 					</div>
 				</form>
 
 						
 		        		<br>
-		        		<a href="nuevaContrasena.php">¿Olvidaste tu contraseña?</a><br>
+		        		<a href="nuevaContrasena.php" style="color:#000000;">¿Olvidaste tu contraseña?</a><br>
 
-					</div>
-					<a href="crearCuenta.php">Crear Una Cuenta</a><br>
+				</div>	
+					<a href="crearCuenta.php" style="color: #000000;">Crear Una Cuenta de afiliacion</a><br>
 			
 			
 			

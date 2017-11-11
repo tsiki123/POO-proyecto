@@ -34,13 +34,13 @@
     
     <title>Cooperativa POO</title>
 </head>
-<body>
+<body style="background-image:url(imagenes/background.jpg); background-size:cover; background-attachment: fixed;">
 		<div class="container">
-				<center><h1> <strong> <img src="imagenes/coop2.jpg" style="width:200px"> </strong> </h1></center>
+				<center><h1> <strong> <img src="imagenes/coop4.jpg" style="width:200px; height: 100px;"> </strong> </h1></center>
 				<center><h1> <strong></strong> </h1></center>
 				
 				<center><h5>Apertura de Cuenta</h5></center>
-				</div>
+		</div>
 
 		<center>
 			<div class= "well" id = "div-formulario1"  style="width:600px" style="height: 400px" >
@@ -93,7 +93,9 @@
 			                    </td>
 			                    <td colspan="2">
 			                    <br>
-			                        <input type="submit" id="btn-regresar" onclick="pop();" name="btn-regresar" value="Regresar" class="btn btn-primary" >    
+			                    	<a href="index.html">
+			                        <input type="submit" id="btn-regresar" onclick="pop();" name="btn-regresar" value="Regresar" class="btn btn-primary" >  
+			                        </a>  
 			                    </td>
 			                  
 			                  </tr>
