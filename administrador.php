@@ -1,10 +1,13 @@
 <?php
     session_start();
-     $_SESSION["usuario"]="JOSE LUIS ALVARENGA GONZALEZ";
-     if( !isset($_SESSION["usuario"]) ){
-        header("location:index.php");
+    include_once("logout.php");
+    
+  
+    if( !isset($_SESSION["tipo"]) || $_SESSION["tipo"]!=0){
+        header("location:index.html");
         exit();
      }
+     
     include_once('logout.php');
      $buscar=$db->query('SELECT * FROM usuario');
 
@@ -32,7 +35,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
      <h1>BIENVENIDO</h1>&nbsp;
-    <a class="navbar-brand" href="#"><h3><?php echo $_SESSION['usuario'];?></h3></a>
+    <a class="navbar-brand" href="#"><h3><?php echo $_SESSION['NOMBRE'];?></h3></a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
         <a class="nav-link" href="#"> <span class="sr-only"></span></a>
@@ -58,7 +61,7 @@
     <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Profile</a>
+    <a class="nav-link" data-toggle="tab" href="#profile" role="tab">VER PERFILES</a>
   </li>
 
 </ul>
