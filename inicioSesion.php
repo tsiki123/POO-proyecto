@@ -1,4 +1,4 @@
-<?php	
+?php	
 	if(isset($_POST['contrasena'])&&isset($_POST['correo'])){
 		$correo=$correo=$_POST['correo'];
 		$contrasena=$_POST['contrasena'];
@@ -32,13 +32,8 @@
 
 
 
-<<<<<<< HEAD:inicioSesion.php
-*/
-        //echo $resultado['tipo-usuar'];
-=======
-        
->>>>>>> origin/master:index.php
-?>
+
+    
 <!DOCTYPE html>
 <html lang="es">
 <head>
