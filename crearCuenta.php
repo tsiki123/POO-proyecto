@@ -1,6 +1,7 @@
 <?php
 
 include_once('logout.php');
+include_once('class/Usuario.php');
 	if(isset($_POST['nombre']) && isset($_POST['apellido']) && isset($_POST['nombre-usuario']) && isset($_POST['identidad']) && isset($_POST['telefono']) && isset($_POST['celular']) && isset($_POST['contrasena']) && isset($_POST['contrasena2']) ){
 			if($_POST['contrasena']==$_POST['contrasena2']){
 					$nombre=$_POST['nombre'];
@@ -10,6 +11,17 @@ include_once('logout.php');
 					$celular=$_POST['celular'];
 					$identidad=$_POST['identidad'];
 					$contrasena=$_POST['contrasena'];
+					/*$usuario= new Usuario();
+					$usuario->setNombre($nombre);
+					$usuario->setApellido($apellido);
+					$usuario->setNumeroTelefono($telefono);
+					$usuario->setNumeroCelular($celular);
+					$usuario->setnombreUsuario($nick);
+					$usuario->setNumeroIdentidad($identidad);
+					$usuario->setContrasena($contrasena);*/
+					
+					//$usuario=new Usuario($nick, $contrasena, $identidad, $nombre, $apellido, $telefono, $celular);
+					//$usuario->guardarUsuario();
 					$sql="INSERT INTO usuario(tipo_usuario, nombre, nombre_usuario, apellido, n_telefono, identidad, n_celular, contrasena)VALUES(2, '$nombre', '$nick', '$apellido', '$telefono', '$identidad', '$celular', '$contrasena' )";
 					$db->query($sql);
 					header('location: inicioSesion.php');
@@ -65,7 +77,7 @@ include_once('logout.php');
 		<center>
 			<div class= "well "  id = "div-formulario1"  style="width:700px; background-color:#d3d3d3;" style="height: 400px" >
 						
-				<form action="crearCuenta.php" method="get">
+				<form action="crearCuenta.php" method="POST">
 				<table   class="formulario" style="width: 600px" style="height: 200" style="margin: 10px">
 			                  <tr>
 
@@ -148,6 +160,6 @@ include_once('logout.php');
 
 <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-<script src="js/IniciarSesion.js"></script>
+
 </body>
 </html>

@@ -5,15 +5,17 @@
         private $apellido;
         private $numeroTelefono;
         private $numeroCelular;
-
-        function __contstruct($numeroIdentidad,$nombre,
-        $apellido, $numeroTelefono, $numeroCelular){
-            $this->numeroIdentidad=$numeroIdentidad;
+        
+        
+        public function __contruct($id, $nombre, $apellido, $telefono, $celular){
             $this->nombre=$nombre;
+            $this->numeroIdentidad=$id;
             $this->apellido=$apellido;
-            $this->numeroTelefono=$numeroTelefono;
-            $this->numeroCelular=$numeroCelular;
+            $this->numeroTelefono=$telefono;
+            $this->numeroCelular=$celular;
+
         }
+     
         
         public function setNumeroIdentidad($var){$this->numeroIdentidad=$var;}
         public function setNombre($var){$this->nombre=$var;}
