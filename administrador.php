@@ -63,48 +63,137 @@
   <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="#profile" role="tab">VER PERFILES</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#mensajes" role="tab">MENSAJES</a>
+  </li>
 
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
   <div class="tab-pane active" id="home" role="tabpanel">
+          <table class="table table-striped">
+          <thead>
+            <tr>
+             <th>codigo prestamo</th>
+              <th>Nombre del cliente</th>
+              <th>Monto del prestamo</th>
+              <th>Estado del prestamo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
 
+                   
+                    $busqueda=$db->query("SELECT *
+                    FROM prestamo
+    INNER JOIN estado_prestamo ON prestamo.estado_prestamo= estado_prestamo.estado_prestamo;");
+
+                    while($fila=$busqueda->fetch()){
+                        $name=$fila['codigo_usuario'];
+                          $query="SELECT nombre FROM usuario WHERE codigo_usuario='$name' ";
+                          $registro=$db->query($query);
+                          $nombre=$registro->fetch();
+                        ?>
+                        <tr>
+
+                            <th><?php echo $fila['codigo_prestamo'];?></th>
+                            <th><?php echo $nomre['nombre'];?></th>
+                            <th><?php echo $fila['monto_prestamo'];?></th>
+                            <th><?php echo $fila['descripcion']?></th>  
+                        </tr>
+                        
+                        
+                        <?php
+                    }
+                
+            ?> 
+          
+            
+          </tbody>
+        </table>
+     
   </div>
-  <div class="tab-pane" id="profile" role="tabpanel">
-  <table class="table table-striped">
-  <thead>
-    <tr>
-      <th>No.IDENTIDAD</th>
-      <th>NOMBRE</th>
-      <th>APELLIDO</th>
-      <th>NOMBRE USUARIO</th>
-      <th>TELEFONO</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php 
 
-            while($row=$buscar->fetch()){
-                ?>
-                <tr>
-                    <th><?php echo $row['identidad'];?></th>
-                    <th><?php echo $row['nombre'];?></th>
-                    <th><?php echo $row['apellido']?></th>
 
-                    <th><?php echo $row['nombre_usuario'];?></th>
-                    <th><?php echo $row['n_telefono'];?></th>
-                </tr>
-                
-                
-                <?php
-            }
-        
-    ?> 
+
+
+
   
-    
-  </tbody>
-</table>
+  <div class="tab-pane" id="profile" role="tabpanel">
+          <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>No.IDENTIDAD</th>
+              <th>NOMBRE</th>
+              <th>APELLIDO</th>
+              <th>NOMBRE USUARIO</th>
+              <th>TELEFONO</th>
+              <th>CONTRASEÑA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+
+                    while($row=$buscar->fetch()){
+                        ?>
+                        <tr>
+                            <th><?php echo $row['identidad'];?></th>
+                            <th><?php echo $row['nombre'];?></th>
+                            <th><?php echo $row['apellido']?></th>
+
+                            <th><?php echo $row['nombre_usuario'];?></th>
+                            <th><?php echo $row['n_telefono'];?></th>
+                            <th><?php echo $row['contrasena'];?></th>
+                        </tr>
+                        
+                        
+                        <?php
+                    }
+                
+            ?> 
+          
+            
+          </tbody>
+        </table>
+  </div>
+  <div class="tab-pane " id="mensajes" role="tabpanel">
+          <table class="table table-striped">
+          <thead>
+            <tr>
+             <th>nombre</th>
+              <th>correo</th>
+              <th>mensaje</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <?php 
+
+                   
+                    $busqueda=$db->query("SELECT * FROM mensaje");
+
+                    while($fila=$busqueda->fetch()){
+                
+                        ?>
+                        <tr>
+
+                            <th><?php echo $fila['nombre'];?></th>
+                            <th><?php echo $fila['correo'];?></th>
+                            <th><?php echo $fila['mensaje'];?></th>
+                             
+                        </tr>
+                        
+                        
+                        <?php
+                    }
+                
+            ?> 
+          
+            
+          </tbody>
+        </table>
+     
   </div>
  
 </div>

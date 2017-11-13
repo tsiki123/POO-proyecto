@@ -222,17 +222,18 @@ body {font-family: "Lato", sans-serif}
         <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
       </div>
       <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
+        <form >
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
             <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Nombre" required name="Name">
+              <input class="w3-input w3-border" type="text" placeholder="Nombre" required id="nombre" name="Name">
             </div>
             <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Correo" required name="Email">
+              <input class="w3-input w3-border" type="text" placeholder="Correo" required id="correo" name="Email">
             </div>
           </div>
-          <input class="w3-input w3-border" type="text" placeholder="Mensaje" required name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="submit">ENVIAR</button>
+          <input class="w3-input w3-border" type="text" placeholder="Mensaje" required  id="mensaje" name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="button" id="boton">ENVIAR</button>
+          <div id="respuesta"></div>
         </form>
       </div>
     </div>
@@ -308,6 +309,8 @@ window.onclick = function(event) {
   }
 }
 </script>
+<script src="js/jquery.min.js"></script>
+<script src="js/mensaje.js"></script>
 
 </body>
 </html>

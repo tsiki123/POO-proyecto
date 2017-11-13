@@ -36,3 +36,7 @@ CREATE TABLE estado_cuota(estado_cuota integer NOT NULL, descripcion character(5
 
 CREATE TABLE cuota(codigo_cuota serial NOT NULL,codigo_prestamo integer, estado_cuota integer, fecha_pago date, monto_cuota double precision, PRIMARY KEY (codigo_cuota), FOREIGN KEY (codigo_prestamo) REFERENCES prestamo (codigo_prestamo) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION, FOREIGN KEY (estado_cuota) REFERENCES estado_cuota (estado_cuota) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION );
 
+
+CREATE TABLE mensaje(codigo_mensaje serial NOT NULL , correo character(50), nombre character(50), mensaje character(250), PRIMARY KEY (codigo_mensaje));
+
+

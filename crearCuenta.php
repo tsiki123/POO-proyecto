@@ -1,7 +1,7 @@
 <?php
 
 include_once('logout.php');
-include_once('class/Usuario.php');
+
 	if(isset($_POST['nombre']) && isset($_POST['apellido']) && isset($_POST['nombre-usuario']) && isset($_POST['identidad']) && isset($_POST['telefono']) && isset($_POST['celular']) && isset($_POST['contrasena']) && isset($_POST['contrasena2']) ){
 			if($_POST['contrasena']==$_POST['contrasena2']){
 					$nombre=$_POST['nombre'];
@@ -30,7 +30,7 @@ include_once('class/Usuario.php');
 				print "Suscontrasenas no coinciden";
 			}
 	}else{
-		print 'faltan datos';
+		//print 'faltan datos';
 	}
 
 ?>
