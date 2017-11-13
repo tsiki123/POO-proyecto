@@ -12,26 +12,27 @@
 		$row=$consulta->fetch();
 		$_SESSION['CODIGO'] =$row['codigo_usuario'];
 		$_SESSION['NOMBRE']=$row['nombre'];
-		
+		$tipo=$row['tipo_usuario'];
+		$_SESSION['TIPO']=$tipo;
 
 		
 		
-			switch($row['tipo_usuario']){
+			switch($tipo){
 				
-							case 0:
-								$_SESSION['tipo']=0;
+							case '0':
+								
 								header('location: administrador.php');
 								break;
-							case 1;
+							case '1';
 								
-								$_SESSION['tipo']=1;
 								header('location: gerentePrestamo.php');
 								break;
-							case 2:
-								
-								$_SESSION['tipo']=2;
+							case '2':
+							
 								header('location: cliente.php');
-								break;	
+								break;
+						
+
 				
 			}
 

@@ -3,7 +3,7 @@
     include_once("logout.php");
     
   
-    if( !isset($_SESSION["tipo"]) || $_SESSION["tipo"]!=0){
+    if( !isset($_SESSION["TIPO"]) || $_SESSION["TIPO"]!=0){
         header("location:index.html");
         exit();
      }
@@ -58,7 +58,7 @@
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Home</a>
+    <a class="nav-link active" data-toggle="tab" href="#home" role="tab">VER PRESTAMOS </a>
   </li>
   <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="#profile" role="tab">VER PERFILES</a>
@@ -78,7 +78,8 @@
       <th>No.IDENTIDAD</th>
       <th>NOMBRE</th>
       <th>APELLIDO</th>
-      <th>CORREO</th>
+      <th>NOMBRE USUARIO</th>
+      <th>TELEFONO</th>
     </tr>
   </thead>
   <tbody>
@@ -89,9 +90,10 @@
                 <tr>
                     <th><?php echo $row['identidad'];?></th>
                     <th><?php echo $row['nombre'];?></th>
-                    <th><?php echo $row['contrasena']?></th>
+                    <th><?php echo $row['apellido']?></th>
 
                     <th><?php echo $row['nombre_usuario'];?></th>
+                    <th><?php echo $row['n_telefono'];?></th>
                 </tr>
                 
                 
@@ -106,12 +108,6 @@
   </div>
  
 </div>
-  
-
- 
-
-
-           
 
 </body>
     <script src="js/jquery-3.2.1.min.js"></script>
