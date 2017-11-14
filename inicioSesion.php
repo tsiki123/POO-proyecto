@@ -1,44 +1,54 @@
 <?php	
-	if(isset($_POST['contrasena'])&&isset($_POST['correo'])){
-		$correo=$correo=$_POST['correo'];
-		$contrasena=$_POST['contrasena'];
-
 		include_once('logout.php');
-		//include_once('class/Usuario.php');
 		session_start();
 		
-				$consulta=$db->query("SELECT * FROM usuario WHERE correo='$correo' ");
-				$row=$consulta->fetch();
-				
-				$_SESSION['usuario']=$row['nombre'];
-				$_SESSION['tipoUsuario']=$row['tipo-usuario'];		
-		//new Usuario($consulta['identidad'],$consulta['nombre'],$consulta['apellido'], $consulta['numero-telefono'], $consulta['numero-celular'], $consulta['codigo-usuario'],$consulta['contrasena'],$consulta['tipo-usuario'], $consulta['correo']);	
+
+	if(isset($_POST['nombre-usuario']) && isset($_POST['contrasena'])){
+		$usuario= $_POST['nombre-usuario'];
+		$contrasena= $_POST['contrasena'];
 		
-		switch($_SESSION['tipoUsuario']){
+		$query="SELECT tipo_usuario, codigo_usuario,  nombre FROM usuario WHERE nombre_usuario='$usuario' and contrasena='$contrasena' ";
+		$consulta=$db->query($query);
+		$row=$consulta->fetch();
+		$_SESSION['CODIGO'] =$row['codigo_usuario'];
+		$_SESSION['NOMBRE']=$row['nombre'];
+		$tipo=$row['tipo_usuario'];
+		$_SESSION['TIPO']=$tipo;
 
-			case 0:
-				header('location: administrador.php');
-				break;
-			case 1;
-				header('location: gerentePrestamo.php');
-				break;
-			case 2:
-				header('location: cliente.php');
-				break;	
+		
+		
+			switch($tipo){
+				
+							case '0':
+								
+								header('location: administrador.php');
+								break;
+							case '1';
+								
+								header('location: principal.php');
+								break;
+							case '2':
+							
+								header('location: cliente.php');
+								break;
+						
 
+				
+			}
+
+			
 		}
-
-	}
-
-
-
-<<<<<<< HEAD:inicioSesion.php
-*/
-        //echo $resultado['tipo-usuar'];
-=======
-        
->>>>>>> origin/master:index.php
+		
+		
+		
+	
+	
+	
+		
 ?>
+
+
+    
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -82,9 +92,9 @@
 			<div class= "well" id = "div-formulario1"  style="width:500px" style="height: 500px">
 
 
-				<form style="width:300px"  class="well" style="height: 500px" action="index.php" method="post">
+				<form style="width:300px"  class="well" style="height: 500px" action="inicioSesion.php" method="POST">
 					<div>
-						<input type="email" class="form-control" name="correo" id="correo" placeholder="Correo" require autofocus >
+						<input type="text" class="form-control" name="nombre-usuario" id="nombre-usuario" placeholder="nombre de usuario" require autofocus >
 					</div></br></br>
 					
 					
@@ -99,7 +109,7 @@
 
 						
 		        		<br>
-		        		<a href="nuevaContrasena.php" style="color:#000000;">¿Olvidaste tu contraseña?</a><br>
+		        		<a href="index.html" style="color:#000000;">regresar</a><br>
 
 				</div>	
 					<a href="crearCuenta.php" style="color: #000000;">Crear Una Cuenta de afiliacion</a><br>
