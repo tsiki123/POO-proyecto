@@ -59,44 +59,8 @@ body {font-family: "Lato", sans-serif}
 
 
   
-  <div class="mySlides w3-display-container w3-center">
-    <img src="/w3images/ny.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Descuentos con nuestras tarjetas</h3>
-      <p><b>compra en una gran cantidad de comercios y obten descuentos al instante</b></p>    
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <img src="/w3images/chicago.jpg" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>solicita Prestamos al instante</h3>
-      <p><b>solicita un prestamo automatico y te lo aprobamos al instante</b></p>    
-    </div>
-  </div>
-
   
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-  <br>
-  <br>
-  <br>
-    <h2 class="w3-wide">Cooperativa POO</h2>
-    <p class="w3-opacity"><i>Servicios Financieros al alcance de Todos</i></p>
-    <h3><p class="w3-justify">Somos una entidad financiera con alcance a nivel nacional, enfocados en ofrecer los mejores servicios de ahorro y credito en el pais.
-    <p>
-      MISIÓN
-      <br>
-      Somos una cooperativa de ahorro y crédito con la mision de brindarte los mejores servicios financieros, innovando cada dia nuestros servicios y poniendolos al alcance de todos.
-    </p>
-    <p>
-      VISIÓN
-      <br>
-      Ser una cooperativa solida y lider en servicios de ahorro y credito, brindando una mejor calidad en la prestacion de nuestros servicios a todos nuestros afiliados.
-    </p>
 
-    </p>
-    </h3>
-    
-  </div>
 
   
 
