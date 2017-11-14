@@ -25,7 +25,7 @@
 								break;
 							case '1';
 								
-								header('location: gerentePrestamo.php');
+								header('location: principal.php');
 								break;
 							case '2':
 							

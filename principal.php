@@ -1,3 +1,13 @@
+<?php
+	if(!isset($_SESSION['CODIGO'])){
+			header("locate: index.html");
+
+	}
+	
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <title>Principal</title>
@@ -29,7 +39,7 @@ body {font-family: "Lato", sans-serif}
       <button class="w3-padding-large w3-button" title="More"> PRESTAMOS  <i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
         <a href="solicitudPrestamo.php" class="w3-bar-item w3-button">Solicitar Prestamo</a>
-        <a href="#" class="w3-bar-item w3-button">Ver solicitudes de Prestamos</a>
+        <a href="#verSolicitud" class="w3-bar-item w3-button">Ver solicitudes de Prestamos</a>
 
         
       </div>
@@ -90,6 +100,79 @@ body {font-family: "Lato", sans-serif}
 
   
 
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="verSolicitud">
+	<form>
+            <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <table   class="formulario" style="width: 600px" style="height: 200" style="margin: 10px">
+			                  <tr>
+
+			                    
+			                    <td  >
+									
+									<label >datos del solicitante de prestamo:</label>
+									
+									<label >Nombre de usuario :</label>
+									
+			                    	<input type="text" onclick="pop();" name="nombre" data-html="true" class="form-control" placeholder="Nombre" data-toggle="popover" data-content="-usa [2-12] caracteres <br>-solo usa letras" data-container="body" data-placement="left">
+			                    </td>
+			                    <td >
+								<label for="Apellido">apellido :</label>
+			                    <span>id="apellido" type="text" onclick="pop();" name="apellido" data-html="true" class="form-control" placeholder="apellido" data-toggle="popover" data-content="-Usa [2-12] caracteres <br>-Solo usa letras" data-container="body" data-placement="top" >
+								</td>
+							  </tr>
+						
+			                  
+			                  
+			                 
+			                  
+
+
+			                    
+			                   
+			                    <br>
+			                   
+              </table>
+              </div>
+               <div class="col-md-6">
+				   
+              
+              </div>
+            </div>
+          </div>
+       <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                
+              </div>
+               <div class="col-md-6">
+                <tr>
+
+			                    
+			                    <td  >
+									
+									<label >datos delprestamo:</label>
+									
+									<label >codigo de solicitud:</label>
+									
+			                    	<input type="text" onclick="pop();" name="codPrestamo" data-html="true" class="form-control" placeholder="Nombre" data-toggle="popover" data-content="-usa [2-12] caracteres <br>-solo usa letras" data-container="body" data-placement="left">
+			                    </td>
+			                    <td >
+								<label for="monto">monto del prestamo :</label>
+			                    <input id="monto" type="text" onclick="pop();" name="monto" data-html="true" class="form-control" placeholder="apellido" data-toggle="popover" data-content="-Usa [2-12] caracteres <br>-Solo usa letras" data-container="body" data-placement="top" >
+								</td>
+							  </tr>
+              </div>
+            </div>
+          </div>
+          
+          
+          <a class="btn btn-primary " href="inicioSesion.php">Enviar Solicitud</a>
+          <a class="btn btn-primary " href="inicioSesion.ohp">Cancelar</a>
+        </form>
+    
+  </div>
 
 
 
