@@ -1,6 +1,6 @@
 <?php
     session_start();
-    
+ 	$_SESSION["usuario"]="JOSE LUIS ALVARENGA GONZALEZ";   
      if( !isset($_SESSION["usuario"]) ){
         header("location:index.php");
         exit();
