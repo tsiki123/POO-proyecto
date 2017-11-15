@@ -25,11 +25,11 @@
 								break;
 							case '1';
 								
-								header('location: principal.php');
+								header('location: gerentePrestamo.php');
 								break;
 							case '2':
 							
-								header('location: cliente.php');
+								header('location: principal.html');
 								break;
 						
 

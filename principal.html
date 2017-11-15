@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
-<title>inicioCoop</title>
+<title>Principal</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/bootstrap.css">
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
@@ -15,32 +14,32 @@ body {font-family: "Lato", sans-serif}
 
 <!-- Navbar -->
 <div class="w3-top" >
-  <div class="w3-bar w3-black w3-card">
+  <div class="w3-bar w3-blue w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large"><img src="imagenes/coop4.jpg" style="width:150px; height:50px; padding: 10px; margin:10px;"></a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small" style="width:200px; height:50px; padding: 10px; margin:20px;">¿QUIÉNES SOMOS?</a>
-    <a href="#beneficios" class="w3-bar-item w3-button w3-padding-large w3-hide-small" style="width:140px; height:50px; padding: 10px; margin:20px;">BENEFICIOS</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small" style="width:200px; height:50px; padding: 10px; margin:20px;">BIENVENIDO</a>
+    
     
     <div class="w3-dropdown-hover w3-hide-small" style="width:180px; height:50px; padding: 10px; margin:10px;">
-      <button class="w3-padding-large w3-button" title="More">PRODUCTOS  <i class="fa fa-caret-down"></i></button>     
+      <button class="w3-padding-large w3-button" title="More">CUENTAS <i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#cuentas" class="w3-bar-item w3-button">Cuentas de Ahorro</a>
-        <a href="#prestamos" class="w3-bar-item w3-button">Prestamos</a>
-        <a href="#" class="w3-bar-item w3-button">Seguros de Vida</a>
+        <a href="crearCuenta.php" class="w3-bar-item w3-button">Afiliarse</a>
+        <a href="#prestamos" class="w3-bar-item w3-button">Ver Cuentas </a>
+        
       </div>
     </div>
-    <div class="w3-dropdown-hover w3-hide-small" style="width:160px; height:50px; padding: 10px; margin:10px;">
-      <button class="w3-padding-large w3-button" title="More">SERVICIOS  <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-hover w3-hide-small" style="width:180px; height:50px; padding: 10px; margin:10px;">
+      <button class="w3-padding-large w3-button" title="More">PRESTAMOS  <i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">Pagos por planilla</a>
-        <a href="#" class="w3-bar-item w3-button">cajeros Automaticos</a>
-        <a href="#" class="w3-bar-item w3-button">Remesas</a>
+        <a href="#" class="w3-bar-item w3-button">Solicitar Prestamo</a>
+        <a href="#" class="w3-bar-item w3-button">Ver solicitudes de Prestamos</a>
+        
       </div>
     </div>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small" style="width:140px; height:50px; padding: 10px; margin:20px;">CONTÁCTENOS </a>
+    
 
     <div>
-      <a href="inicioSesion.php"  > <input type="button" class="btn btn-info btn btn-lg" value="Iniciar Sesión" style="width:110px; height:40px; padding: 10px; margin:20px;"></a>
+      <a href="index..html"  > <input type="submit" class="btn btn-primary btn btn-lg" value="Salir " style="width:110px; height:40px; padding: 10px; margin:20px;"></a>
     </div>
 
     
@@ -223,18 +222,17 @@ body {font-family: "Lato", sans-serif}
         <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
       </div>
       <div class="w3-col m6">
-        <form >
+        <form action="/action_page.php" target="_blank">
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
             <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Nombre" required id="nombre" name="Name">
+              <input class="w3-input w3-border" type="text" placeholder="Nombre" required name="Name">
             </div>
             <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Correo" required id="correo" name="Email">
+              <input class="w3-input w3-border" type="text" placeholder="Correo" required name="Email">
             </div>
           </div>
-          <input class="w3-input w3-border" type="text" placeholder="Mensaje" required  id="mensaje" name="Message">
-          <button class="w3-button w3-black w3-section w3-right" type="button" id="boton">ENVIAR</button>
-          <div id="respuesta"></div>
+          <input class="w3-input w3-border" type="text" placeholder="Mensaje" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">ENVIAR</button>
         </form>
       </div>
     </div>
@@ -310,8 +308,6 @@ window.onclick = function(event) {
   }
 }
 </script>
-<script src="js/jquery.min.js"></script>
-<script src="js/mensaje.js"></script>
 
 </body>
 </html>
