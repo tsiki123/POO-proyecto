@@ -27,7 +27,7 @@ CREATE TABLE  estado_prestamo(estado_prestamo integer NOT NULL, descripcion char
 
  
 
-CREATE TABLE prestamo(codigo_prestamo serial, codigo_usuario integer, estado_prestamo integer, monto_prestamo double precision, fecha_solicitud date, fecha_aprobacion date, fecha_tentativa date, PRIMARY KEY (codigo_prestamo), FOREIGN KEY (codigo_usuario)REFERENCES usuario (codigo_usuario) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION, FOREIGN KEY (estado_prestamo) REFERENCES estado_prestamo (estado_prestamo) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION);
+CREATE TABLE prestamo(codigo_prestamo serial, codigo_final character(20), codigo_usuario integer, estado_prestamo integer, monto_prestamo double precision, fecha_solicitud date, fecha_aprobacion date, fecha_tentativa date, PRIMARY KEY (codigo_prestamo), FOREIGN KEY (codigo_usuario)REFERENCES usuario (codigo_usuario) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION, FOREIGN KEY (estado_prestamo) REFERENCES estado_prestamo (estado_prestamo) MATCH SIMPLE ON UPDATE NO ACTION ON DELETE NO ACTION);
 
 
 

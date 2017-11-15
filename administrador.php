@@ -97,8 +97,8 @@
                         ?>
                         <tr>
 
-                            <th><?php echo $fila['codigo_prestamo'];?></th>
-                            <th><?php echo $nomre['nombre'];?></th>
+                            <th><?php echo $fila['codigo_final'];?></th>
+                            <th><?php echo $nombre['nombre'];?></th>
                             <th><?php echo $fila['monto_prestamo'];?></th>
                             <th><?php echo $fila['descripcion']?></th>  
                         </tr>
