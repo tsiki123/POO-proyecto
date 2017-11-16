@@ -180,13 +180,18 @@ body {font-family: "Lato", sans-serif}
       <div class="tab-pane " id="pedir" role="tabpanel">
          
           <form method="post" action="buscarprest.php">
-                <input type="text" name="jose"  placeholder="ingrese el codigo del prestamo">
+                <input type="text" name="jose"  placeholder="CODIGO PRESTAMO">
                 <input type="submit"  class=" btn btn-primary " value="buscar cuotas">
           </form>
           <form action="pagarCuota.php" method="post">
                  <input type="text" name="pagoCuota" placeholder="CODIGO DE LA CUOTA" >
                  <input type="submit" class="btn btn-danger" value="pagar">                 
           </form>
+          <form action="terminar.php" method="post">
+                 <input type="text" name="terminarPagos" placeholder="CODIGO DEL PRESTAMO" >
+                 <input type="submit" class="btn btn-danger" value="cancelar prestamo">                 
+          </form>
+
           <table class="table table-striped">
           <thead>
             <tr>
