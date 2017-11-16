@@ -45,7 +45,7 @@
 				$ano=date("Y");
 				$conca=$guion.$ano;
 				$convertir=(string) $codigo;
-				$concatenacion=$codigo.date("z").date("G").$conca;
+				$concatenacion=$codigo.date("s").date("G").$conca;
 				
 			
 				$sql="INSERT INTO prestamo(codigo_final, codigo_usuario, estado_prestamo, monto_prestamo, fecha_solicitud, fecha_tentativa)VALUES('$concatenacion', '$codigo',0, '$monto', '$fechaSoli','$nuevafecha' )";

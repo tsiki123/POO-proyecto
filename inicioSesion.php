@@ -29,7 +29,7 @@
 								break;
 							case '2':
 							
-								header('location: principal.html');
+								header('location: cliente.php');
 								break;
 						
 

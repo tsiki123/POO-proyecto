@@ -55,8 +55,7 @@
 </nav>
 
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
+<ul class="nav nav-tabs" style="background-color: black;" role="tablist">
   <li class="nav-item">
     <a class="nav-link active" data-toggle="tab" href="#home" role="tab">VER PRESTAMOS </a>
   </li>
@@ -64,8 +63,10 @@
     <a class="nav-link" data-toggle="tab" href="#profile" role="tab">VER PERFILES</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#mensajes" role="tab">MENSAJES</a>
+    <a class="nav-link" data-toggle="tab" href="#mensajes" role="tab">VER MENSAJES</a>
   </li>
+
+
 
 </ul>
 
@@ -83,7 +84,7 @@
           </thead>
           <tbody>
             <?php 
-
+					
                    
                     $busqueda=$db->query("SELECT *
                     FROM prestamo
@@ -125,6 +126,7 @@
           <thead>
             <tr>
               <th>No.IDENTIDAD</th>
+              <th>CODIGO USUARIO</th>
               <th>NOMBRE</th>
               <th>APELLIDO</th>
               <th>NOMBRE USUARIO</th>
@@ -139,6 +141,7 @@
                         ?>
                         <tr>
                             <th><?php echo $row['identidad'];?></th>
+                            <th><?php echo $row['codigo_usuario'];?></th>
                             <th><?php echo $row['nombre'];?></th>
                             <th><?php echo $row['apellido']?></th>
 
@@ -195,8 +198,14 @@
         </table>
      
   </div>
+
+  
+    
+      
+   
+   
  
-</div>
+ </div>
 
 </body>
     <script src="js/jquery-3.2.1.min.js"></script>

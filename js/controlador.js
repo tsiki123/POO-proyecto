@@ -1,16 +1,15 @@
-$('#home').click(function(){
-    $('#home').addClass('active')
-    $('#lugar1').addClass('active');
+$("#find").click(function(){
+     var algo= $("#buscaPrestamo").val();
+    var url="codigo="+algo;
+    $.ajax({
+        data: url,
+        url: "buscarprest.php",
+        type: "post",
+        success: function(dato){
+           $("#set").html(dato);
+        }
 
-    $("#usuarios").removeClass('active');
-    $("#lugar2").removeClass('active');
-    
+    });
+
 });
 
-
-/*
-$("#usuarios").click(function(){
-    $("#home").addClass("active");
-    $("#menu1").removeClass("active");
-    $("#menu2").removeClass("active");
-});*/
