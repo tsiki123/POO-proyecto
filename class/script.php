@@ -10,7 +10,8 @@
 
 	
 		$db->query("DELETE FROM cuota");
-		$db->query("DELETE FROM prestamo")
+		$db->query("DELETE FROM prestamo");
+		$db->query("DELETE FROM usuario");
     /*$codigo=6;
    $prestamo=new Prestamo($codigo, $monto);
     $prestamo->guardarPrestamo();*/

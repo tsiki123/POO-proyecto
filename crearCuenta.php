@@ -85,35 +85,35 @@ include_once('logout.php');
 			                    <td  >
 									<label >Nombre de usuario :</label>
 									
-			                    	<input type="text" onclick="pop();" name="nombre" data-html="true" class="form-control" placeholder="Nombre" data-toggle="popover" data-content="-usa [2-12] caracteres <br>-solo usa letras" data-container="body" data-placement="left">
+			                    	<input type="text" onclick="pop();" name="nombre" data-html="true" class="form-control" placeholder="Nombre" data-toggle="popover" data-content="-usa [2-12] caracteres <br>-solo usa letras" data-container="body" data-placement="left" require>
 			                    </td>
 			                    <td >
 								<label for="Apellido">apellido :</label>
-			                    <input id="apellido" type="text" onclick="pop();" name="apellido" data-html="true" class="form-control" placeholder="apellido" data-toggle="popover" data-content="-Usa [2-12] caracteres <br>-Solo usa letras" data-container="body" data-placement="top" >
+			                    <input id="apellido" type="text" onclick="pop();" name="apellido" data-html="true" class="form-control" placeholder="apellido" data-toggle="popover" data-content="-Usa [2-12] caracteres <br>-Solo usa letras" data-container="body" data-placement="top"  require >
 								</td>
 							  </tr>
 							  <tr>
 			                    <td  >
 			                    <label for="nombre-usuario">Nombre de usuario :</label>
-			                    <input type="text" name="nombre-usuario" onclick="pop();" class="form-control" data-html="true" placeholder="Nombre de usuario" id="numero-identidad" data-toggle="popover" data-html="true"  data-content="-Usa [4-15]" data-container="body" data-placement="left"></td>
+			                    <input type="text" name="nombre-usuario" onclick="pop();" class="form-control" data-html="true" placeholder="Nombre de usuario" id="numero-identidad" data-toggle="popover" data-html="true"  data-content="-Usa [4-15]" data-container="body" data-placement="left"  require></td>
 			                  </tr>
 			                  
 			                  <tr>
 			                    <td  >
 			                    <label>Numero de Identidad :</label>
-			                    <input type="text" name="identidad" onclick="pop();" class="form-control" data-html="true" placeholder="Numero Identidad" id="numero-identidad" data-toggle="popover" data-html="true"  data-content="-Usa [4-15] caracteres <br> -Puedes usar solo numeros" data-container="body" data-placement="left"></td>
+			                    <input type="text" name="identidad" onclick="pop();" class="form-control" data-html="true" placeholder="Numero Identidad" id="numero-identidad" data-toggle="popover" data-html="true"  data-content="-Usa [4-15] caracteres <br> -Puedes usar solo numeros" data-container="body" data-placement="left"  require></td>
 			                  </tr>
 			                 
 			                  <tr>
 			                    <td >
 			                	<label >Numero de telefono :</label>
 			                    <input type="text" name="telefono" class="form-control" onclick="pop();" placeholder="Telefono" id="numero-telefonico"  data-toggle="popover" data-html="true" title="Telefono:" data-content="-Usa [8-12] caracteres <br>
-								-Usa solo numeros <br>" data-placement="left" data-container="body"></td>  </td>
+								-Usa solo numeros <br>" data-placement="left" data-container="body"  require></td>  </td>
 								
 								<td >
 			                    	<label for="celular">Numero de celular :</label>
 										<input type="text" name="celular" class="form-control" onclick="pop();" placeholder="Celular" id="numero-celular"  data-toggle="popover" data-html="true" title="Celular:" data-content="-Usa [8-12] caracteres <br>
-										-Usa solo numeros <br>" data-placement="left" data-container="body">
+										-Usa solo numeros <br>" data-placement="left" data-container="body"  require>
 								 </td>
 			                    
 			                  </tr>
@@ -122,12 +122,12 @@ include_once('logout.php');
 			                    <label for="contrasena">Contraseña :</label>
 			                    <input type="password" name="contrasena" onclick="pop();" class="form-control" placeholder="Escriba su contraseña" id="contrasena" data-toggle="popover" data-html="true" title="Telefono:" data-content="-Usa [8-12] caracteres <br>
 			                    -Usa una letra mayuscula y una miniscula como minimo <br>
-			                    -Un numero como minimo <br>-Asegurate de que las contraseñas coincidan" data-placement="left" data-container="body" ></td>
+			                    -Un numero como minimo <br>-Asegurate de que las contraseñas coincidan" data-placement="left" data-container="body"  require></td>
 								<td  >
 								<label for="contrasena2">Confirmar</label>
 
 			                    
-			                    <input type="password" name="contrasena2" onclick="pop();" class="form-control" placeholder="confirme contraseña" id="contrasena2" data-toggle="popover" data-html="true" title="Contrasena:" data-content="-Usa [8-24] caracteres <br> Asegurate de que las contraseñas coincidan" data-placement="left" data-container="body" ></td>
+			                    <input type="password" name="contrasena2" onclick="pop();" class="form-control" placeholder="confirme contraseña" id="contrasena2" data-toggle="popover" data-html="true" title="Contrasena:" data-content="-Usa [8-24] caracteres <br> Asegurate de que las contraseñas coincidan" data-placement="left" data-container="body"  require></td>
 			                    
 							</tr>
 			                  
